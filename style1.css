@@ -1,0 +1,234 @@
+/* Project: TIC-TAC-TOE
+Author: Imtiaz Adar
+Contact: imtiazadarofficial@gmail.com */
+
+body{
+    margin: 10px;
+    padding: 10px;
+    background-color: #202020;
+    color: white;
+    overflow: hidden;
+}
+.info{
+    font-family: 'Lilita One', cursive;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: -20px;
+
+}
+/* .result{
+    display: flex;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #ffffff;
+    text-align: center;
+
+} */
+
+.game{
+    /* We want container and controller side by side, that's why flex */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    height: calc(100vh - 100px);
+
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* height: 60vmin;
+    width: 60vmin; */
+    width: min(70vmin, 70vw, 70vh);
+    height: min(70vmin, 70vw, 70vh);
+    /* margin: auto; */
+    gap: 5px;
+}
+
+.controller{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+    /* flex-direction: column; winner turn playagain vertically */
+    gap: 10px;
+}
+.controller h3{
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bolder;
+}
+.cell{
+    display: flex;
+    background-color: #006633;
+    color: black;
+    font-size: 50px;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ffff;
+}
+
+.b1{
+    cursor: pointer;
+}
+.b1:active{
+    background-color: #009999;
+    color: white;
+}
+
+.b2{
+    cursor: pointer;
+}
+.b2:active{
+    background-color: #009999;
+    color: white;
+}
+
+.b3{
+    cursor: pointer;
+}
+.b3:active{
+    background-color: #009999;
+    color: white;
+}
+
+.b4{
+    cursor: pointer;
+}
+.b4:active{
+    background-color: #009999;
+    color: white;
+}
+
+.b5{
+    cursor: pointer;
+}
+.b5:active{
+    background-color: #009999;
+    color: white;
+}
+
+.b6{
+    cursor: pointer;
+}
+.b6:active{
+    background-color: #009999;
+    color: white;
+}
+
+.b7{
+    cursor: pointer;
+}
+.b7:active{
+    background-color: #009999;
+    color: white;
+}
+
+.b8{
+    cursor: pointer;
+}
+.b8:active{
+    background-color: #009999;
+    color: white;
+}
+
+.b9{
+    cursor: pointer;
+}
+.b9:active{
+    background-color: #009999;
+    color: white;
+}
+
+.playAgain {
+    background-color: chocolate;
+    font-family: 'Orbitron', sans-serif;
+    color: black;
+    margin-top: 20px;
+    height: 120px;
+    width: 200px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 12px;       /* smooth corners */
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* subtle shadow */
+    transition: all 0.3s ease; /* smooth animation */
+}
+
+.playAgain:hover {
+    background-color: #d2691e; /* slightly darker chocolate */
+    color: white;
+    transform: scale(1.05);    /* gentle zoom */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.playAgain:active {
+    transform: scale(0.97);    /* pressed effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.x-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;                /* space between icon and text */
+    margin-top: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    background-color: #000000;   /* X brand color */
+    border: 2px solid #444;
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.x-link:hover {
+    background-color: #1a1a1a;
+    transform: scale(1.05); /* subtle hover zoom */
+}
+
+.x-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%); /* makes icon white */
+}
+
+
+
+/* For tablets (screen ≤ 900px) */
+@media (max-width: 900px) {
+    .container {
+        width: 80vw;
+        height: 80vw;
+    }
+    .cell {
+        font-size: 20px;
+    }
+}
+
+/* For mobile (screen ≤ 600px) */
+@media (max-width: 600px) {
+    .container {
+        width: 90vw;
+        height: 90vw;
+    }
+    .cell {
+        font-size: 16px;
+    }
+    .info {
+        font-size: 18px;
+    }
+}
